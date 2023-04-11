@@ -46,6 +46,8 @@ public class QuizActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("MY_PREF", Context.MODE_PRIVATE);
         String userNameFromSharedPreference = sharedPreferences.getString("Username", "");
         Integer currentProgress = sharedPreferences.getInt("Progress", 0);
+        Integer score = sharedPreferences.getInt("Score", 0);
+
         question = findViewById(R.id.textView2);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setProgress(currentProgress);
@@ -84,7 +86,6 @@ public class QuizActivity extends AppCompatActivity {
             button.setBackgroundTintList(colorRed);
         }
     }
-
     private void moveToNextQuestion() {
         currentQuestionIndex++;
         if (currentQuestionIndex < quizQuestions.size()) {
@@ -93,7 +94,8 @@ public class QuizActivity extends AppCompatActivity {
             selection_3.setBackgroundTintList(colorNeutral);
             updateUI();
         } else {
-            Toast.makeText(QuizActivity.this, "Quiz complete!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(QuizActivity.this, ResultsActivity.class);
+            startActivity(intent);
         }
     }
 

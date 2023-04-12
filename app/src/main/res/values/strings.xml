@@ -3,42 +3,7 @@
     <string name="startText">Start</string>
     <string name="usernameString">Enter Username</string>
     <string name="welcomeString">Welcome, </string>
-
-    <string-array name="question_array">
-        <item>What color is the sky?</item>
-        <item>What color is grass?</item>
-        <item>How many fingers do humans have?</item>
-        <item>What color is Homer Simpsons pants?</item>
-        <item>At what Celsius does water boil?</item>
-    </string-array>
-
-    <string-array name="questionOneAnswers">
-        <item>Blue</item>
-        <item>Red</item>
-        <item>Green</item>
-    </string-array>
-
-    <string-array name="question2Answers">
-        <item>Purple</item>
-        <item>Turquoise</item>
-        <item>Green</item>
-    </string-array>
-
-    <string-array name="question3Answers">
-        <item>10</item>
-        <item>8</item>
-        <item>20</item>
-    </string-array>
-
-    <string-array name="question4Answers">
-        <item>Green</item>
-        <item>Blue</item>
-        <item>Red</item>
-    </string-array>
-
-    <string-array name="question5Answers">
-        <item>100 Degrees</item>
-        <item>88 Degrees</item>
-        <item>110 Degrees</item>
-    </string-array>
+    <string name="takeNewQuizString">Take new Quiz</string>
+    <string name="exitString">Exit</string>
+    <string name="textview">TextView</string>
 </resources>

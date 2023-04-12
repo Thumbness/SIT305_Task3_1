@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     EditText editUsername;
     SharedPreferences sharedPreferences;
+    String userNameFromSharedPreference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         editUsername = findViewById(R.id.editTextTextPersonName);
 
         sharedPreferences = getSharedPreferences("MY_PREF", Context.MODE_PRIVATE);
-        String userNameFromSharedPreference = sharedPreferences.getString("Username", "");
-
+        userNameFromSharedPreference = sharedPreferences.getString("Username", "");
+        editUsername.setText(userNameFromSharedPreference);
 
         startButton.setOnClickListener(view -> {
             Log.v("Button clicked", "Button");

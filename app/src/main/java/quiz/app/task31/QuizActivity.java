@@ -54,6 +54,7 @@ public class QuizActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("MY_PREF", Context.MODE_PRIVATE);
         userNameFromSharedPreference = sharedPreferences.getString("Username", "");
         score = sharedPreferences.getInt("Score", 0);
+
         welcomeText = findViewById(R.id.welcomeTextView);
         question = findViewById(R.id.textView2);
         progressBar = findViewById(R.id.progressBar);
@@ -67,16 +68,16 @@ public class QuizActivity extends AppCompatActivity {
         updateUI();
 
         selection_1.setOnClickListener(view -> {
-            checkAnswer(0,score, selection_1);
+            checkAnswer(0, selection_1);
         });
         selection_2.setOnClickListener(view -> {
-            checkAnswer(1,score, selection_2);
+            checkAnswer(1, selection_2);
         });
         selection_3.setOnClickListener(view -> {
-            checkAnswer(2, score, selection_3);
+            checkAnswer(2, selection_3);
         });
         nextButton.setOnClickListener(view -> {
-            moveToNextQuestion(score);
+            moveToNextQuestion();
         });
     }
     private void updateUI() {
@@ -88,11 +89,11 @@ public class QuizActivity extends AppCompatActivity {
         selection_2.setText(options[1]);
         selection_3.setText(options[2]);
     }
-    private void checkAnswer(int selectedOptionIndex, int score, Button button ) {
+    private void checkAnswer(int selectedOptionIndex, Button button ) {
         QuizQuestion currentQuestion = quizQuestions.get(currentQuestionIndex);
         if (selectedOptionIndex == currentQuestion.getCorrectAnswerIndex()) {
             button.setBackgroundTintList(colorGreen);
-            score += 1;
+            score++;
         } else {
             button.setBackgroundTintList(colorRed);
         }
@@ -111,7 +112,7 @@ public class QuizActivity extends AppCompatActivity {
         selection_2.setEnabled(true);
         selection_3.setEnabled(true);
     }
-    private void moveToNextQuestion(int score) {
+    private void moveToNextQuestion() {
         currentQuestionIndex++;
         welcomeText.setEnabled(false);
         if (currentQuestionIndex < quizQuestions.size()) {

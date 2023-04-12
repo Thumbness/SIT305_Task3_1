@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("MY_PREF", Context.MODE_PRIVATE);
         String userNameFromSharedPreference = sharedPreferences.getString("Username", "");
-        editUsername.setText(userNameFromSharedPreference);
 
 
         startButton.setOnClickListener(view -> {

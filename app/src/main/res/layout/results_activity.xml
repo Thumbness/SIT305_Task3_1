@@ -7,13 +7,13 @@
 
     <TextView
         android:id="@+id/finCongratsText"
-        android:layout_width="328dp"
-        android:layout_height="88dp"
+        android:layout_width="366dp"
+        android:layout_height="142dp"
         android:layout_marginTop="172dp"
         android:layout_marginBottom="540dp"
         android:text="text"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/newQuizButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="238dp"
+        android:layout_height="100dp"
         android:text="@string/takeNewQuizString"
         app:backgroundTint="#409723"
         app:layout_constraintBottom_toTopOf="@+id/exitButton"
@@ -34,13 +34,14 @@
 
     <Button
         android:id="@+id/exitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="103dp"
         android:text="@string/exitString"
         app:backgroundTint="#9F0B0B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finCongratsText" />
+        app:layout_constraintTop_toBottomOf="@+id/finCongratsText"
+        app:layout_constraintVertical_bias="0.803" />
 </androidx.constraintlayout.widget.ConstraintLayout>

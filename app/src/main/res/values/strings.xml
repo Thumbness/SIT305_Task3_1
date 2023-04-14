@@ -6,4 +6,5 @@
     <string name="takeNewQuizString">Take new Quiz</string>
     <string name="exitString">Exit</string>
     <string name="textview">TextView</string>
+    <string name="headerTextview">SIT305 Quiz App</string>
 </resources>
